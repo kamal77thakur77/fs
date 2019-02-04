@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>User Registration form</title>
+<style>
+h1{
+text-align:center;
+color:green;
+}
+form{
+text-align:center;
+padding-top:40px;
+
+
+}
+label{
+font-size:25px;
+color:blue;
+
+}
+
+input[type=text]{
+width:25%;
+
+padding:5px 7px 4px 3px;
+background-color:#E6E6FA;
+
+}
+#btn{
+background-color:#E6E6FA;
+color:green;
+width:15%;
+height:30px;
+}
+
+</style>
+</head>
+<body>
+<h1>Registration Form</h1>
+<form action="#" onsubmit="return validation()">
+
+
+<label>Username:</label>
+       <input type="text" class="name" id="name"><br><br>
+<label>Email ID:</label>
+       <input type="text" class="email" id="email"><br><br>
+<label>Password:</label>
+       <input type="text" class="password" id="pass"><br><br>
+ 
+<label>Mobile Num.:</label>
+      <input type="text" class="mob" id="mob"><br><br>
+        
+<input type="submit" name="submit" value="submit" id="btn">
+
+  
+  </form>
+ 
+<script>
+   
+    function validation(){
+    name=document.getElementById('name').value;
+   email=document.getElementById('email').value;
+    pass=document.getElementById('pass').value;
+    mob_no =document.getElementById('mob').value;
+     if(name==''){
+        window.alert("Please fill the name");
+      
+    }
+    else if(name.length<=2) //--Name must be atleast of 3 letters
+    {
+     window.alert("Invalid Name");
+    }
+    
+ else if(email=='')
+    {
+        window.alert("Please fill your email");
+}
+     else if(email.indexOf('@')<=0){
+         window.alert("**please fill the email id i proper format");
+        
+     }
+     
+ else if(pass==''){
+        window.alert("Please provide password");
+      
+    }
+    else if(mob_no==''||mob.length<10){
+        window.alert("Invalid Length");
+        }
+else document.write("form sumitted");
+  
+
+}
+   
+</script>
+</body>
+</html>
